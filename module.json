@@ -1,0 +1,93 @@
+{
+  "name": "HAL Media Player",
+  "type": "OSC",
+  "path": "Hardware",
+
+  "version": "0.0.1",
+  "description": "Control HAL Media Player (raspberry pi)",
+  "url": "https://github.com/DonGuig/HAL-Media-Player-Chataigne-module",
+  "downloadURL": "https://github.com/DonGuig/HAL-Media-Player-Chataigne-module/archive/master.zip",
+
+  "hasInput": false,
+  "hasOutput": true,
+  "hideDefaultCommands": false,
+  "defaults": {
+    "autoAdd": false,
+    "splitArguments": false,
+    "useHierarchy": false,
+    "autoFeedback": false,
+    "booleanSendMode": "Int",
+    "OSC Outputs": {
+      "OSC Output": {
+        "remotePort": 5005,
+        "local": false,
+        "listenToFeedback": false
+      }
+    }
+  },
+
+  "parameters": {},
+
+  "hideDefaultParameters": [
+    "colorSendMode",
+    "autoFeedback",
+    "useHierarchy",
+    "colorSendMode",
+    "autoAdd",
+    "oscInput/localPort",
+    "oscOutputs/oscOutput/remotePort",
+    "oscOutputs/oscOutput/listenToFeedback",
+    "oscOutputs/oscOutput/local",
+    "booleanSendMode"
+  ],
+
+  "scripts": ["moduleScript.js"],
+
+  "values": {
+    "Play": {
+      "type": "Trigger"
+    },
+    "Pause": {
+      "type": "Trigger"
+    },
+    "Stop": {
+      "type": "Trigger"
+    },
+    "Restart": {
+      "type": "Trigger"
+    },
+    "Reboot": {
+      "type": "Trigger"
+    },
+    "Shutdown": {
+      "type": "Trigger"
+    }
+  },
+
+  "commands": {
+    "Play": {
+      "menu": "",
+      "callback": "play"
+    },
+    "Pause": {
+      "menu": "",
+      "callback": "pause"
+    },
+    "Stop": {
+      "menu": "",
+      "callback": "stop"
+    },
+    "Restart": {
+      "menu": "",
+      "callback": "restart"
+    },
+    "Reboot": {
+      "menu": "",
+      "callback": "reboot"
+    },
+    "Shutdown": {
+      "menu": "",
+      "callback": "shutdown"
+    }
+  }
+}
