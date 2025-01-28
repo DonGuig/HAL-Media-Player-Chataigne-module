@@ -61,6 +61,12 @@
     },
     "Shutdown": {
       "type": "Trigger"
+    },
+    "HDMI On": {
+      "type": "Trigger"
+    },
+    "HDMI Off": {
+      "type": "Trigger"
     }
   },
 
@@ -88,6 +94,14 @@
     "Shutdown": {
       "menu": "",
       "callback": "shutdown"
+    },
+    "HDMI On": {
+      "menu": "",
+      "callback": "hdmi_on"
+    },
+    "HDMI Off": {
+      "menu": "",
+      "callback": "hdmi_off"
     }
   }
 }

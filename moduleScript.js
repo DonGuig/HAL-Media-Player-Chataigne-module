@@ -20,6 +20,8 @@ function moduleValueChanged(value) {
     else if (value.name === "restart") restart();
     else if (value.name === "reboot") reboot();
     else if (value.name === "shutdown") shutdown();
+    else if (value.name === "hdmiOn") hdmi_on();
+    else if (value.name === "hdmiOff") hdmi_off();
   }
 }
 
@@ -54,3 +56,10 @@ function shutdown() {
   sendToHALMP("/shutdown");
 }
 
+function hdmi_on() {
+  sendToHALMP("/hdmi_on");
+}
+
+function hdmi_off() {
+  sendToHALMP("/hdmi_off");
+}
